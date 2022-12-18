@@ -7,13 +7,11 @@ public class CaptureSettingManager : MonoBehaviour
 {
     public GameObject CaptureDisplay;
     private UwcWindowTexture WindowTexture;
-    private Material WindowMaterial;
     private TMP_Dropdown Dropdown;
     private Toggle Toggle;
     void Start()
     {
         WindowTexture = CaptureDisplay.GetComponent<UwcWindowTexture>();
-        WindowMaterial = CaptureDisplay.GetComponent<Renderer>().material;
         Dropdown = GetComponent<TMP_Dropdown>();
         Toggle = GetComponent<Toggle>();
         switch (gameObject.name)
@@ -26,9 +24,6 @@ public class CaptureSettingManager : MonoBehaviour
                 break;
             case "CPFPSDropdown":
                 GetCPFPS();
-                break;
-            case "CP1P":
-                GetCP1P();
                 break;
         }
     }
@@ -50,12 +45,6 @@ public class CaptureSettingManager : MonoBehaviour
             Dropdown.value = JsonConfig.GetInt("CaptureFPS");
         SetCPFPS();
 
-    }
-    public void GetCP1P()
-    {
-        if (JsonConfig.HasKey("Capture1P")) 
-            Toggle.isOn = JsonConfig.GetBoolean("Capture1P");
-        SetCP1P();
     }
 
     public void SetCPMode()
@@ -97,11 +86,5 @@ public class CaptureSettingManager : MonoBehaviour
                 break;
         }
         JsonConfig.SetInt("CaptureFPS", Dropdown.value);
-    }
-    
-    public void SetCP1P()
-    {
-        WindowMaterial.SetTextureScale("_MainTex",new Vector2(Toggle.isOn ? 1f : 0.5f, -1));
-        JsonConfig.SetBoolean("Capture1P", Toggle.isOn);
     }
 }

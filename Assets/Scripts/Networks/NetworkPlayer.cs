@@ -32,7 +32,6 @@ public class NetworkPlayer : NetworkBehaviour
             var clientHead = GetComponentInChildren<TrackedPoseDriver>();
             var clientCamera = GetComponentInChildren<Camera>();
             var clientAudioListener = GetComponentInChildren<AudioListener>();
-            var clientLIV = GetComponent<LIV.SDK.Unity.LIV>();
             var clientWindowEncoder = GetComponent<WindowEncoder>();
             //var clientOVRManager = gameObject.transform.Find("OVRManager").gameObject;
 
@@ -43,7 +42,6 @@ public class NetworkPlayer : NetworkBehaviour
             clientMoveProvider.enabled = false;
             clientTurnProvider.enabled = false;
             clientHead.enabled = false;
-            clientLIV.enabled = false;
             clientWindowEncoder.enabled = false;
             foreach (var ray in clientRays)
             {
@@ -57,7 +55,6 @@ public class NetworkPlayer : NetworkBehaviour
             {
                 Destroy(haptic);
             }
-            clientLIV.enabled = false;
             //clientOVRManager.SetActive(false);
         }
     }

@@ -1367,7 +1367,6 @@ GameObject:
   - component: {fileID: 5750725100998440659}
   - component: {fileID: 6158170661135394525}
   - component: {fileID: 6624966205270134813}
-  - component: {fileID: 8625235735168551632}
   - component: {fileID: 1486532002687246983}
   m_Layer: 0
   m_Name: XRLocal
@@ -1507,33 +1506,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
---- !u!114 &8625235735168551632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149481173429413636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 419ad76f2ffc722478bc67f61f9c32e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stage: {fileID: 149481173429413638}
-  _stageTransform: {fileID: 0}
-  _HMDCamera: {fileID: 149481173433458723}
-  _MRCameraPrefab: {fileID: 0}
-  _disableStandardAssets: 0
-  _spectatorLayerMask:
-    serializedVersion: 2
-    m_Bits: 119
-  _excludeBehaviours:
-  - AudioListener
-  - Collider
-  - SteamVR_Camera
-  - SteamVR_Fade
-  - SteamVR_ExternalCamera
-  _fixPostEffectsAlpha: 1
 --- !u!114 &1486532002687246983
 MonoBehaviour:
   m_ObjectHideFlags: 0
