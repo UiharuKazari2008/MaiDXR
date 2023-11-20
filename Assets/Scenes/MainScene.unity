@@ -26819,6 +26819,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tomato
       objectReference: {fileID: 0}
+    - target: {fileID: 4101161180453605438, guid: 41fa4519a343929479c8a4d972c427cb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41fa4519a343929479c8a4d972c427cb, type: 3}
 --- !u!4 &1864217553 stripped
